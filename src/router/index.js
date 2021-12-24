@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
 import { HashRouter, Route, Switch, Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { getUserInfo } from '@/store/actions.js'
+// import { getUserInfo } from '@/store/actions'
 import Layout from '@/views/layout'
 import Login from '@/views/login' 
 
 
 class Router extends Component {
   render() {
-    const { token, role, getUserInfo } = this.props;
+    const { token } = this.props;
     return (
       <HashRouter>
         <Switch>
@@ -20,11 +20,6 @@ class Router extends Component {
                 return <Redirect to='/login' />
               } else {
                 return <Layout/>
-                // if ( role ) {
-                //   return <Layout/>
-                // } else {
-                //   getUserInfo(token).then(() => <Layout />)
-                // }
               } 
             }}
           ></Route>
@@ -34,4 +29,4 @@ class Router extends Component {
   }
 }
 
-export default  connect((state) => state.user, { getUserInfo })(Router)
+export default  connect((state) => state.user)(Router)

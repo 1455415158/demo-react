@@ -1,8 +1,8 @@
 import { getUserInfo, setUserToken, setUserInfo, resetUser } from "./user";
 
 export {
-  getUserInfo, 
+  // getUserInfo, 
   setUserToken, 
-  setUserInfo, 
+  // setUserInfo, 
   resetUser
 }

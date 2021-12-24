@@ -1,9 +1,9 @@
 import * as types from '../action-types'
-import { getToken } from '@/utils/auth'
+import { getToken } from '@/utils/auth.js'
 const initUserInfo = {
-  name: '',
-  role: '',
-  avatar: '',
+  // name: '',
+  // role: '',
+  // avatar: '',
   token: getToken()
 }
 
